@@ -1,0 +1,50 @@
+#main-container{
+    width: 1024px;
+    margin: 0px auto;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+#img-container{
+    width: 200px;
+    float: left;
+}
+#details-container{
+    float: right;
+    width: 808px;
+    margin: 0px 8px;
+}
+#name-container{
+    width: 100%;
+    height: 36px;
+    overflow: hidden;
+}
+#name-container{
+    width: 100%;
+    height: 36px;
+    overflow: hidden;
+}
+#info-container{
+    width: 100%;
+}
+#buttons-container{
+    width: 100%;
+    height: 36px;
+}
+#buttons{
+    float: right;
+    height: 36px;
+}
+p{
+    font-size: 14px;
+}
+
+.name-cell{
+    width:30%;
+}
+.other-cell{
+    .name-cell{
+        width:10%;
+    }
+}

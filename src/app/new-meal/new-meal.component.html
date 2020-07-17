@@ -1,0 +1,143 @@
+<div id="main-container">
+  <div class="row">
+    <div class="col-xs-12">
+      <form [formGroup]="mealForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-xs-12">
+            <div style="float: right">
+              <button type="submit" class="btn btn-success" [disabled] = "!mealForm.valid">Save</button>
+              <button type="submit" class="btn btn-danger">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" class="form-control" formControlName="name">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+              <div class="form-group">
+                  <label for="imagePath">Image URL</label>
+                  <input type="text"
+                    id="imagePath"
+                    class="form-control"
+                    formControlName="imagePath"
+                    #imagePath>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+              <img [src]="imagePath.value" alt="image link not working" class="img-responsive">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-12" formArrayName="ingredients">
+              <div class="row"
+              *ngFor="let ingredientCtrl of getControls(); let i = index"
+              [formGroupName]="i"
+              style="margin-top: 10px"
+              >
+                <div class="col-xs-2">
+                  <input type="text"
+                    class="form-control"
+                    formControlName="name"
+                    placeholder="name"
+                    >
+                </div>
+                <div class="col-xs-1">
+                    <input type="text"
+                      class="form-control"
+                      formControlName="quantity"
+                      placeholder="qua."
+                      >
+                </div>
+                <div class="col-xs-1">
+                    <input type="text"
+                      class="form-control"
+                      formControlName="calories"
+                      placeholder="cal."
+                      >
+                </div>
+                <div class="col-xs-1">
+                    <input type="text"
+                      class="form-control"
+                      formControlName="protein"
+                      placeholder="P"
+                      >
+                </div>
+                <div class="col-xs-1">
+                    <input type="text"
+                      class="form-control"
+                      formControlName="carbs"
+                      placeholder="C"
+                      >
+                </div>
+                <div class="col-xs-1">
+                    <input type="text"
+                      class="form-control"
+                      formControlName="fat"
+                      placeholder="F"
+                      >
+                </div>
+                <div class="col-xs-1">
+                    <input type="text"
+                      class="form-control"
+                      formControlName="saturatedFat"
+                      placeholder="sat.F"
+                      >
+                </div>
+                <div class="col-xs-1">
+                    <input type="text"
+                      class="form-control"
+                      formControlName="dietaryFibre"
+                      placeholder="DF"
+                      >
+                </div>
+                <div class="col-xs-1">
+                    <input type="text"
+                      class="form-control"
+                      formControlName="sugar"
+                      placeholder="sug."
+                      >
+                </div>
+                <div class="col-xs-1">
+                    <input type="text"
+                      class="form-control"
+                      formControlName="sodium"
+                      placeholder="sod."
+                      >
+                </div>
+                <div class="col-xs-1">
+                    <button type="button" class="btn btn-danger" (click)="onDeleteIngredient(i)">X</button>
+                  </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-xs-12">
+                  <button type="button" 
+                    class="btn btn-success"
+                    (click)="onAddIngredient()"
+                  >
+                  Add Ingredient
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+      </form>
+    </div>
+  </div>
+</div>

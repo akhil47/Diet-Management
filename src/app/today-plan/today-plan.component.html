@@ -1,0 +1,7 @@
+<div id="main-container">
+    <h3>Today's Total calorie intake : {{ calories }}cal</h3>
+    <h4>Protein: {{ protein }}g  Carbs: {{ carbs }}g  Fat: {{ fat }}g  Sugar: {{ sugar }}g  Sodium: {{ sodium }}mg</h4>
+    <hr>
+    <app-meal-horizontal *ngFor="let mealItem of meals; let i = index" [meal]="mealItem" [id]= i>
+    </app-meal-horizontal>
+</div>

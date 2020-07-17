@@ -1,0 +1,11 @@
+img{
+    height: 150px;
+    width: 150px;
+}
+#info{
+    padding: 0px 16px;
+    overflow: hidden;
+}
+#main-container{
+    margin: 8px 0px;
+}

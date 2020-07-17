@@ -1,0 +1,24 @@
+<div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" [routerLink] = "['/meals']">Diet Management</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li routerLinkActive="active"><a [routerLink] = "['/meals']" >Meals</a></li>
+            <li routerLinkActive="active"><a [routerLink] = "['todays-plan']">Today's Plan</a></li>
+            <li routerLinkActive="active"><a [routerLink] = "['/new-meal']">New Meal</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown" appAppDropdown>
+              <a style="cursor: pointer;" class="dropdown-toggle" role="button">Account  <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a (click)="onRetrieveData()" style="cursor: pointer;">Retrieve Data</a></li>
+                <li><a (click)="onStoreData()" style="cursor: pointer;">Store Data</a></li>
+                <li><a (click)="onLogout()" style="cursor: pointer;">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</div>

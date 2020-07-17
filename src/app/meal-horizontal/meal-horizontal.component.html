@@ -1,0 +1,14 @@
+<div id="main-container">
+    <div class="list-group-item clearfix">
+        <div class="pull-left">
+            <img [src]="meal.imagePath" alt="image">
+            
+            <div id="info" class="pull-right">
+              <h4 class="card-title">{{ meal.name }}</h4>
+              <p>P: {{ meal.protein }}g    C: {{ meal.carbs }}g    F:{{ meal.fat }}</p>
+              <h4>{{ meal.calories }}cal</h4>
+              <button (click)="onRemove()" class="btn btn-danger">Remove</button>
+            </div>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,15 @@
+.meal-container{
+    width: 216px;
+    height: 100%;
+    padding: 8px;
+    margin: 16px;
+    background-color: #f2efed;
+    float: left;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}

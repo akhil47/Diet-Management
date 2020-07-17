@@ -1,0 +1,16 @@
+img{
+    height: 200px;
+    width: 200px;
+}
+p{
+    font-size: 12px;
+    padding: 4px 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+h4{
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}

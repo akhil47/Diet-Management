@@ -1,0 +1,51 @@
+<div id="main-container">
+    <div id="img-container">
+      <img [src]="meal.imagePath" alt="image">
+    </div>
+    <div id="details-container">
+      <div id="name-container">
+        <h4 class="card-title">{{ meal.name }}</h4>
+      </div>
+      <div id="info">
+        <p>P: {{ meal.protein }}g    C: {{ meal.carbs }}g    F:{{ meal.fat }}g   
+          Dietary Fibre:{{ meal.dietaryFibre }}   Saturated Fat: {{ meal.saturatedFat }}   Sugar: {{ meal.sugar }}   Sodium: {{ meal.sodium }}</p>
+      </div>
+      <div id="buttons-container">
+        <button (click)="onAddToTodayPlan()" class="btn btn-success">Add to Today's Plan</button>
+        <button (click)="onEditMeal()" class="btn btn-primary">Update</button>
+        <button (click)="onDeleteMeal()" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+    <div style="float: left; background: white; height: 8px; width: 100%;"></div>
+    <div style="float: left; background: grey; height: 2px; width: 100%;"></div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="name-cell">Name</th>
+            <th scope="col" class="other-cell">Quantity</th>
+            <th scope="col" class="other-cell">Calories</th>
+            <th scope="col" class="other-cell">Protein</th>
+            <th scope="col" class="other-cell">Carbs</th>
+            <th scope="col" class="other-cell">Fat</th>
+            <th scope="col" class="other-cell">Saturated Fat</th>
+            <th scope="col" class="other-cell">Dietary Fibre</th>
+            <th scope="col" class="other-cell">Sugar</th>
+            <th scope="col" class="other-cell">Sodium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of meal.ingredients">
+            <th scope="row" class="name-cell">{{ item.name }}</th>
+            <td class="other-cell">{{ item.quantity }}</td>
+            <td class="other-cell">{{ item.calories }}</td>
+            <td class="other-cell">{{ item.protein }}</td>
+            <td class="other-cell">{{ item.carbs }}</td>
+            <td class="other-cell">{{ item.fat }}</td>
+            <td class="other-cell">{{ item.saturatedFat }}</td>
+            <td class="other-cell">{{ item.dietaryFibre }}</td>
+            <td class="other-cell">{{ item.sugar }}</td>
+            <td class="other-cell">{{ item.sodium }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

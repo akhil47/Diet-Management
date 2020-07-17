@@ -1,0 +1,9 @@
+<div>
+  <ul>
+    <li *ngFor="let mealItem of meals; let i = index">
+        <div class="meal-container">
+            <app-meal [meal] = mealItem [index] = i></app-meal>
+        </div>
+    </li>
+  </ul>
+</div>

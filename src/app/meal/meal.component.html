@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+  <a [routerLink] = "['/view-meal', index]">
+    <img class="card-img-top" [src]="meal.imagePath" alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">{{ meal.name }}</h4>
+        <p>P: {{ meal.protein }}g    C: {{ meal.carbs }}g    F:{{ meal.fat }}g</p>
+        <h4>{{ meal.calories }}cal</h4>
+      </div>
+  </a>
+  <button (click)="onAddToPlan()" class="btn btn-success">Add to Today's Plan</button>
+</div>
+
